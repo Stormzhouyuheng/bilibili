@@ -1,6 +1,15 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
-const routes: Array<RouteRecordRaw> = []
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: '/',
+    component: () => import('@/views/Home/index.vue')
+  },
+  {
+    path: '/video/:id',
+    component: () => import('@/views/video/index.vue')
+  }
+]
 
 const router = createRouter({
   history: createWebHashHistory(),
